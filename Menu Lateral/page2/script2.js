@@ -61,7 +61,7 @@ li.forEach((item) => {
 //animação de scroll
 
 const target = document.querySelectorAll('[data-anime]')
-const element = document.querySelectorAll('[data')
+const element = document.querySelectorAll('[data]')
  function animeScroll(){
      const windowTop = window.pageYOffset+900
      target.forEach((e)=>{
@@ -92,3 +92,10 @@ function redirectWithDelay(event) {
       window.location.href = event.target.href;
     }, delay);
   }
+
+  window.addEventListener("load",()=>{
+     target.forEach((e)=>{
+        e.classList.add("anime")
+     })
+  })
+  

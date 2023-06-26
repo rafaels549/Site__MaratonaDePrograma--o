@@ -1,0 +1,284 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+/* Menu hamburguer */
+.linha{
+     
+    margin: 5px;
+    border: 2px solid rgb(255, 254, 254);
+    width: 24px;
+}
+
+.menu{
+    
+    padding: 10px;
+    margin-left: 30px;
+}
+.menu:hover{
+    transition: 0.5s;
+    background-color: rgb(140, 140, 185);
+    border-radius: 50px;
+}
+/* Cabeçalho */
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color:rgb(11, 1, 100); 
+    padding: 30px;
+    z-index: 2;
+    
+    
+}
+/* Ícones das redes socias */
+svg{
+    padding: 1px;
+}
+
+.insta{
+    width: 28px;
+}
+.social{
+    margin-left: 15px;
+}
+/* Navbar */
+li{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid grey;
+    
+}
+.equipe{
+    border-bottom:1px solid grey ;
+}
+li svg{
+    padding: 15px;
+}
+
+li:hover{
+    background-color: blueviolet;
+}
+#navbar{
+    
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    height: 100%;
+    width: 350px;
+    background-color: rgb(49, 8, 87);
+    border-right: 3px solid rgb(69, 69, 197);
+}
+
+ a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    
+    padding: 20px;
+}
+.hide{
+    left: -350px;
+    transition: 0.5s;
+}
+.show{
+    transition: 0.5s;
+    left:0px;
+    
+}
+.active{
+    background-color: blueviolet;
+}
+.no-scroll{
+    overflow: hidden;
+}
+/* Main */
+
+.baloon{
+  
+  position: relative;
+  top: 100px;
+  padding: 30px;
+  background-color:rgb(26, 106, 163)  ;
+  color: white;
+  width: 75%;
+  grid-column: 1/3;
+  
+}
+.baloon::after{
+    content: "";
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(50%);
+  transform: rotate(180deg);
+  border-width: 40px;
+  border-style: solid;
+  border-color: transparent transparent rgb(26, 106, 163) transparent;
+}
+div h1{
+    text-align: center;
+}
+main{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+   
+}
+section{
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns:30vw 13vw;
+    
+     grid-gap: 100px;
+}
+
+.section h1{
+    text-align: left;
+    background-color: rgb(227, 64, 121);
+
+    font-size: 3rem;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    font-weight: 700;
+    
+    
+    padding: 20px;
+   
+    
+}
+.section  h3{
+    margin-left: 28px;
+    color: #33286e;
+}
+.section p{
+    margin-left: 20px;
+    color:  rgb(15, 15, 141);
+}
+.section ol {
+    margin-left: 20px;
+}
+.section2{
+    width: 35vw;
+    height: 300px;
+    grid-column: 3/3;
+    border: 2px solid rgb(70, 70, 202);
+    padding: 15px;
+}
+
+.section2 h1{
+    text-align: left;
+    margin: 0px 0px 16px;
+    font-size: 2.125rem;
+    font-family: Montserrat;
+    color: rgb(227, 64, 121);
+    line-height: 1;
+    font-weight: 700;
+}
+img{
+    grid-column: 3/3;
+    margin-left: 22vw;
+    margin-top: -20vw;
+    width: 300px;
+    
+}
+ol li:hover{
+    background-color: white;
+}
+ol li{
+    border: none;
+    color: rgb(15, 15, 141);
+}
+/* Footer */
+footer{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 50px;
+    position: absolute;
+    bottom: 0;
+    min-width: 95.2%;
+    
+    
+ 
+    
+}
+footer div p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 28px;
+    color: white;
+    
+}
+footer{
+    background-color:rgb(10, 3, 68) ;
+    
+    
+    
+}
+footer div h1{
+     margin-bottom: 1em;
+     color: white;
+}
+[data-anime]{
+    opacity: 0;
+}
+[data-anime="right"]{
+      transform: translate3d(0px,-100px,0px);
+}
+[data-anime].anime{
+    opacity: 1;
+    transform: translate3d(0px,0px,0px);
+    transition: 1s;
+}
+
+@media (max-width:1250px){
+    .section h1{
+        font-size: 32px;
+    }
+    .baloon{
+        width: 100%;
+    }
+     body{
+        overflow-x: hidden;
+     }
+     footer div h1{
+        text-align:left;
+        margin-bottom: 0em;
+     }
+     footer div{
+        margin-bottom: 2em;
+     }
+     footer{
+        display: flex;
+        flex-direction: column;
+        bottom: -700px;
+     }
+     img{
+        position: absolute;
+        width: 170px;
+        top: 800px;
+        left: 180px;
+        
+     }
+    section{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+}
+@media (max-width:600px){
+    footer{
+        bottom:-900px;
+    }
+    .section2{
+        width: 400px;
+    }
+}
