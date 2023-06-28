@@ -34,50 +34,9 @@ document.addEventListener('click', function (event) {
         body.classList.remove("no-scroll")
     }
 })
-function active() {
-    
-    if (nav.classList.contains("show")) {
-        //esconde a navbar
-        nav.classList.remove("show")
-        nav.classList.add("hide")
-        main.style.filter=""
-        footer.style.filter=""
-        body.classList.remove("no-scroll")
-        
-    }
 
-}
-//verifica cada item da navbar
-li.forEach((item) => {
-    //adiciona um ouvinte de evento para o clique de cada item da navbar
-    item.addEventListener("click", active)
-})
 
-//animação de scroll
 
-const target = document.querySelectorAll('[data-anime]')
-const element = document.querySelectorAll('[data')
- function animeScroll(){
-     const windowTop = window.pageYOffset+900
-     target.forEach((e)=>{
-          if((windowTop)>e.offsetTop){
-              e.classList.add("animate")
-          }else{
-            e.classList.remove("animate")
-          }
-     })
-     element.forEach((e)=>{
-        if(windowTop>e.offsetTop){
-            e.classList.add("animation")
-        }else{
-            e.classList.remove("animation")
-        }
-     })
- }
-
-window.addEventListener("scroll",()=>{
-    animeScroll()
-})
 
 
 function redirectWithDelay(event) {
@@ -89,3 +48,29 @@ function redirectWithDelay(event) {
       window.location.href = event.target.href;
     }, delay);
   }
+
+  const target = document.querySelectorAll("[data]")
+
+  window.addEventListener("load",()=>{
+    target.forEach((e)=>{
+        e.classList.add("anime")
+    })
+  })
+
+  function active() {
+   
+    if (nav.classList.contains("show")) {
+        //esconde a navbar
+        nav.classList.remove("show")
+        nav.classList.add("hide")
+        main.style.filter=""
+        footer.style.filter=""
+        body.classList.remove("no-scroll")
+        
+    }
+
+}
+  li.forEach((item) => {
+    //adiciona um ouvinte de evento para o clique de cada item da navbar
+    item.addEventListener("click", active)
+})

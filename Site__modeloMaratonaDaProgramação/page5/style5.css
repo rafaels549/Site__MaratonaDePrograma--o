@@ -1,11 +1,8 @@
+/* Reset */
 *{
     margin: 0;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-body{
-    overflow-x: hidden;
-    height: 100%;
 }
 /* Menu hamburguer */
 .linha{
@@ -53,11 +50,11 @@ svg{
 li{
     display: flex;
     align-items: center;
-    border-top: 1px solid grey;
+    border-top: 1px solid rgb(14, 13, 13);
     
 }
 .equipe{
-    border-bottom:1px solid grey ;
+    border-bottom:1px solid rgb(14, 13, 13) ;
 }
 li svg{
     padding: 15px;
@@ -99,77 +96,60 @@ li:hover{
 .no-scroll{
     overflow: hidden;
 }
-
-/* main */
 main{
-    height: 864px;
-}
-.info{
-     position: relative;
-     top: 200px;
     display: flex;
-   width: 100%;
     justify-content: center;
-    
-  
 }
-
-.objetivo{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    color: rgb(79, 34, 184);
-    
-    
+.section{
+    position: relative;
+    top: 100px;
+    background-color:rgb(26, 106, 163) ;
+    height: 750px;
+    width: 85%;
 }
-
-.sobre{
-    width: 40%;
-    margin-right: 50px;
-    background-color: rgb(81, 5, 151);
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    
-    
+main{
+    height: 975px;
+}
+main h1{
+    text-align: center;
+    margin-bottom: 2em;
+    position: relative;
+    top: 1em;
+    color: white;
+    font-size: 48px;
    
+}
+.principal{
+    margin-bottom: 6em;
+    margin-left: 2rem;
+}
+main div h2{
+    margin-left: 180px;
+    color: rgb(5, 5, 97);
+}
+main div p{
+    width: 50%;
+    font-size: 18px;
+    margin-left: 180px;
+    color: white;
+}
+img{
+    float: left;
+    border-radius: 500px;
+    width: 150px;
     
-}
-.sobre h1{
-    color: white;
-}
-.sobre p{
-    color: white;
-}
-iframe{
-    width: 100%;
-    margin-top: 10px;
 }
 [data-anime]{
-    opacity: 1;
+   opacity: 0;
 }
-/* Variaveis de animação*/
 [data-anime="top"]{
-    transform: translate3d(0px,-50px,0px);
+    transform: translate3d(0px,-100px,0px);
 }
-[data-anime].animate{
-    opacity: 1;
-    transform: translate3d(0px,-6.5px,0px);
-    transition: 0.8s;
-}
-[data]{
-    opacity: 0;
-}
-[data="left"]{
-   transform: translate3d(-50px,0px,0px);
-}
-[data].animation{
-    opacity: 1;
+[data-anime].anime{
     transform: translate3d(0px,0px,0px);
-    transition: 0.8s;
+    transition: 0.5s;
+    opacity: 1;
 }
-/* Footer*/
 footer{
     display: flex;
     justify-content: center;
@@ -184,8 +164,7 @@ footer div p{
 }
 footer{
     background-color:rgb(10, 3, 68) ;
-   
-   
+    
     
     
 }
@@ -193,40 +172,24 @@ footer div h1{
      margin-bottom: 1em;
      color: white;
 }
-[data-anime]{
-    opacity: 0;
-}
-[data-anime="top"]{
-    transform: translate3d(0px,-50px,0px);
-}
-[data-anime].anime{
-    opacity: 1;
-    transform: translate3d(0px,0px,0px);
-    transition: 0.5s;
-}
+
 @media (max-width:1250px){
-    main{
-        height: 1300px;
+   .section h1{
+          font-size: 35px;
     }
-    .info{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-@media (max-width:1000px){
-    main{
-        height: 2000px;
+    .section{
+        height: 850px;
+        width: 100%;
     }
     footer{
         display: flex;
         flex-direction: column;
     }
     footer div h1{
-        margin-bottom: 0em;
+        margin-bottom: 0;
+        
     }
     footer div{
-        margin-bottom: 2em;
+        margin-bottom: 3em;
     }
 }

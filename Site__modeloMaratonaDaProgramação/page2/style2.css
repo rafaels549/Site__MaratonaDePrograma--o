@@ -51,11 +51,11 @@ svg{
 li{
     display: flex;
     align-items: center;
-    border-top: 1px solid grey;
+    border-top: 1px solid rgb(14, 13, 13);
     
 }
 .equipe{
-    border-bottom:1px solid grey ;
+    border-bottom:1px solid rgb(14, 13, 13) ;
 }
 li svg{
     padding: 15px;
@@ -167,7 +167,7 @@ section{
 }
 .section2{
     width: 35vw;
-    height: 300px;
+    height: 150px;
     grid-column: 3/3;
     border: 2px solid rgb(70, 70, 202);
     padding: 15px;
@@ -184,7 +184,7 @@ section{
 }
 img{
     grid-column: 3/3;
-    margin-left: 22vw;
+    margin-left: 22.2vw;
     margin-top: -20vw;
     width: 300px;
     
@@ -239,6 +239,9 @@ footer div h1{
 }
 
 @media (max-width:1250px){
+    .section2{
+        height: 50%;
+    }
     .section h1{
         font-size: 32px;
     }
@@ -276,7 +279,7 @@ footer div h1{
 }
 @media (max-width:600px){
     footer{
-        bottom:-900px;
+        bottom:-850px;
     }
     .section2{
         width: 400px;

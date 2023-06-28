@@ -51,11 +51,11 @@ svg{
 li{
     display: flex;
     align-items: center;
-    border-top: 1px solid grey;
+    border-top: 1px solid rgb(14, 13, 13);
     
 }
 .equipe{
-    border-bottom:1px solid grey ;
+    border-bottom:1px solid rgb(14, 13, 13) ;
 }
 li svg{
     padding: 15px;
@@ -221,11 +221,14 @@ classe a mais para as imagens e para as boxes
     background-color: rgb(46, 7, 83);
     width: 85%;
     padding: 60px;
+    
 }
 .conteudo{
     display: flex;
     flex-direction: column;
-    
+    position: relative;
+    top: -10%;
+    margin-bottom: 2em;
     background-color: aliceblue;
     height: 250px;
     width: 400px;
@@ -238,25 +241,7 @@ classe a mais para as imagens e para as boxes
     text-align: center;
    
 }
-.conteudo1 h1{
-    
-    color: white;
-    padding: 10px;
-    text-align: center;
-    
 
-}
-.conteudo1{
-    display: flex;
-    flex-direction: column;
-    background-color: aliceblue;
-    height: 250px;
-    width: 400px;
-    border-right: 1px solid  rgb(26, 106, 163) ;
-    position: relative;
-    top: 12px;
-    
-}
 .dia{
    background-color:rgb(26, 106, 163)
    
@@ -276,9 +261,10 @@ classe a mais para as imagens e para as boxes
     background-color: rgb(227, 64, 121);
     border-radius: 50px;
     padding: 20px;
-    width: 100px;
+    width: 64px;
     position: relative;
-    bottom: 90px;
+    
+    bottom: 100px;
     
     
     
@@ -321,6 +307,10 @@ footer div h1{
 
 
 @media (max-width:1250px){
+    .png{
+        width: 48px;
+        padding: 20px;
+    }
     .banner{
         display: none;
     }

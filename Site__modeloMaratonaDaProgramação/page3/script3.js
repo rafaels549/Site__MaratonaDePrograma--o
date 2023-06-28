@@ -38,6 +38,7 @@ document.addEventListener('click', function (event) {
 
 
 
+
 function redirectWithDelay(event) {
     event.preventDefault(); // Impede o redirecionamento padrão do href
     var delay = 500;
@@ -55,3 +56,21 @@ function redirectWithDelay(event) {
         e.classList.add("anime")
     })
   })
+
+  function active() {
+   
+    if (nav.classList.contains("show")) {
+        //esconde a navbar
+        nav.classList.remove("show")
+        nav.classList.add("hide")
+        main.style.filter=""
+        footer.style.filter=""
+        body.classList.remove("no-scroll")
+        
+    }
+
+}
+  li.forEach((item) => {
+    //adiciona um ouvinte de evento para o clique de cada item da navbar
+    item.addEventListener("click", active)
+})

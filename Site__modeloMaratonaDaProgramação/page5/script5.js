@@ -1,3 +1,10 @@
+target = document.querySelectorAll("[data-anime]")
+window.addEventListener("load",()=>{
+    target.forEach((e)=>{
+        e.classList.add("anime")
+})
+
+})
 const menu = document.getElementById('menu');
 const nav = document.getElementById('navbar');
 const li = document.querySelectorAll("li")
@@ -35,12 +42,7 @@ document.addEventListener('click', function (event) {
     }
 })
 function active() {
-    li.forEach((item) => {
-        //adiciona a classe active no item da navbar que você clicou e remove do que estava
-        item.classList.remove("active")
-        this.classList.add("active")
-
-    })
+    
     if (nav.classList.contains("show")) {
         //esconde a navbar
         nav.classList.remove("show")
@@ -58,44 +60,15 @@ li.forEach((item) => {
     item.addEventListener("click", active)
 })
 
-//animação de scroll
 
-const target = document.querySelectorAll('[data-anime]')
-const element = document.querySelectorAll('[data]')
- function animeScroll(){
-     const windowTop = window.pageYOffset+900
-     target.forEach((e)=>{
-          if((windowTop)>e.offsetTop){
-              e.classList.add("animate")
-          }else{
-            e.classList.remove("animate")
-          }
-     })
-     element.forEach((e)=>{
-        if(windowTop>e.offsetTop){
-            e.classList.add("animation")
-        }else{
-            e.classList.remove("animation")
-        }
-     })
- }
 
-window.addEventListener("scroll",()=>{
-    animeScroll()
-})
+
 function redirectWithDelay(event) {
     event.preventDefault(); // Impede o redirecionamento padrão do href
-    var delay = 310;
+    var delay = 500;
     
     // Adiciona um atraso antes de redirecionar para a nova página
     setTimeout(function() {
       window.location.href = event.target.href;
     }, delay);
   }
-
-  window.addEventListener("load",()=>{
-     target.forEach((e)=>{
-        e.classList.add("anime")
-     })
-  })
-  
