@@ -38,14 +38,7 @@ header {
 
 
 }
-.mostrar{
-    opacity: 1;
-    transition: 0.5s;
-}
-.remover{
-    opacity: 0;
-    transition: 0.5s;
-}
+
 
 /* Ícones das redes socias */
 svg {

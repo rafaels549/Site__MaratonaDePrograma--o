@@ -36,14 +36,7 @@ header{
     
     
 }
-.mostrar{
-    opacity: 1;
-    transition: 0.5s;
-}
-.remover{
-    opacity: 0;
-    transition: 0.5s;
-}
+
 /* Ícones das redes socias */
 svg{
     padding: 1px;
@@ -316,6 +309,12 @@ footer div h1{
 
 
 @media (max-width:1250px){
+    body{
+        overflow-x: hidden;
+    }
+    footer{
+        width: 90%;
+    }
     .png{
         width: 48px;
         padding: 20px;
