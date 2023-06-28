@@ -15,8 +15,11 @@ menu.addEventListener("click", () => {
         nav.classList.remove("hide")
         main.style.filter="blur(2px)"
         footer.style.filter="blur(2px)"
+        header.style.filter="blur(2px)"
         body.classList.add("no-scroll")
-        
+        header.classList.add("remover")
+        header.classList.remove("mostrar")
+       
 
     }
 })
@@ -33,6 +36,10 @@ document.addEventListener('click', function (event) {
         main.style.filter=""
         footer.style.filter=""
         body.classList.remove("no-scroll")
+        header.style.filter=""
+        header.classList.add("mostrar")
+        header.classList.remove("remover")
+        
     }
 })
 function active() {
@@ -44,6 +51,10 @@ function active() {
         main.style.filter=""
         footer.style.filter=""
         body.classList.remove("no-scroll")
+        header.style.filter=""
+        header.classList.add("mostrar")
+        header.classList.remove("remover")
+        
         
     }
 

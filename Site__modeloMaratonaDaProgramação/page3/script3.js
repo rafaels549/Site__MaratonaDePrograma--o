@@ -16,6 +16,8 @@ menu.addEventListener("click", () => {
         main.style.filter="blur(2px)"
         footer.style.filter="blur(2px)"
         body.classList.add("no-scroll")
+        header.classList.add("remover")
+        header.classList.remove("mostrar")
 
     }
 })
@@ -32,6 +34,9 @@ document.addEventListener('click', function (event) {
         main.style.filter=""
         footer.style.filter=""
         body.classList.remove("no-scroll")
+        header.classList.add("mostrar")
+        header.classList.remove("remover")
+        
     }
 })
 
@@ -66,6 +71,10 @@ function redirectWithDelay(event) {
         main.style.filter=""
         footer.style.filter=""
         body.classList.remove("no-scroll")
+        header.classList.add("mostrar")
+        header.classList.remove("remover")
+        
+       
         
     }
 
